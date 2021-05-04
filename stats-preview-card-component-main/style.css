@@ -6,16 +6,13 @@
 
 html {
   font-size: 62.5%;
-  --header1: calc(2rem + 1vw);
-  --header2: calc(3.5rem + 1vw);
-  --header3: calc(3rem + 1vw);
-  --header4: calc(2.4rem + 1vw);
+  --header1: calc(3.2rem + 1vw);
+  --header2: calc(2.7rem + 1vw);
+  --header3: calc(2rem + 1vw);
+  --header4: calc(1.5rem + 1vw);
   --text: calc(0.5rem + 1vw);
-  --big: calc(2.4rem + 1vw);
-  --special-color: #906272;
-  --main-color: #414141;
-  --grey-text: #525252;
-  /* font-family: "Inter", sans-serif; */
+  --tiny: calc(0.2rem + 1vw);
+
   font-family: "Lexend Deca", sans-serif;
 }
 
@@ -45,70 +42,78 @@ h5 {
   font-size: var(--header4);
 }
 
+span.special {
+  color: hsl(277, 64%, 61%);
+}
+
 ul {
   list-style-type: none;
 }
 
-a {
-  text-decoration: none;
-  color: black;
+body {
+  max-height: 100vh;
+  background-color: hsl(233, 47%, 7%);
 }
 
-main {
-  display: flex;
-  flex-wrap: wrap;
-  border: 10vh solid hsl(233, 47%, 7%);
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
-section.text {
-  flex: 1 1 40rem;
-  padding: 10rem;
-  width: 100%;
-  color: white;
+.card {
+  width: 80%;
+  height: 60vh;
   background-color: hsl(244, 38%, 16%);
+  display: flex;
+  /* flex-wrap: wrap; */
 }
 
-.special {
-  color: hsl(277, 64%, 61%);
+.card-introduction {
+  flex: 1 1 40rem;
+  color: white;
+  padding: 9rem;
 }
 
-.description p {
+.card-introduction p {
   color: hsla(0, 0%, 100%, 0.75);
   padding-top: 3rem;
-  line-height: 5rem;
-  padding-bottom: 10rem;
+  padding-bottom: 8rem;
+  line-height: 150%;
 }
 
-ul {
+.card-introduction .stats ul {
   display: flex;
 }
 
-li {
-  text-align: left;
+.card-introduction .stats li {
   flex: 1 1 40rem;
-  font-size: 4rem;
+  text-align: left;
 }
 
-section.image {
-  flex: 1 1 50rem;
-  background: hsl(278, 93%, 28%);
-  z-index: 10;
+.card-introduction .stats li p {
+  padding-top: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.card-image {
+  flex: 1 1 40rem;
+  background-color: hsl(278, 93%, 28%);
 }
 
 img {
-  height: 100%;
   width: 100%;
+  height: 100%;
   opacity: 0.4;
 }
+
 .attribution {
   font-size: 11px;
   text-align: center;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
-}
-
-.stats-desc {
-  color: hsla(0, 0%, 100%, 0.6);
-  font-size: 2rem;
 }
