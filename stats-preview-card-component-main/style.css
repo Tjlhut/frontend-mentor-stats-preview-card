@@ -1,122 +1,161 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 html {
   font-size: 62.5%;
-  --header1: calc(3.2rem + 1vw);
-  --header2: calc(2.7rem + 1vw);
-  --header3: calc(2rem + 1vw);
-  --header4: calc(1.5rem + 1vw);
-  --text: calc(0.5rem + 1vw);
-  --tiny: calc(0.2rem + 1vw);
-
   font-family: "Lexend Deca", sans-serif;
 }
 
-h1 {
-  font-size: var(--header1);
-}
-li,
-button,
-label,
-input,
-a,
-p {
-  font-size: var(--text);
-}
-
-h2 {
-  font-size: var(--header2);
-}
-
-h3 {
-  font-size: var(--header3);
-  font-weight: normal;
-}
-
-h4,
-h5 {
-  font-size: var(--header4);
-}
-
-span.special {
-  color: hsl(277, 64%, 61%);
-}
-
-ul {
-  list-style-type: none;
-}
-
-body {
-  max-height: 100vh;
-  background-color: hsl(233, 47%, 7%);
-}
-
-.center {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+.content {
+  min-height: 100vh;
+  background-color: #090b1a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .card {
-  width: 80%;
-  height: 60vh;
-  background-color: hsl(244, 38%, 16%);
+  width: 70%;
+  height: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  /* flex-wrap: wrap; */
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
-.card-introduction {
-  flex: 1 1 40rem;
+.card section {
+  width: 50%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 50rem;
+          flex: 1 1 50rem;
+}
+
+.card .text {
+  border-bottom-left-radius: 3rem;
+  border-top-left-radius: 3rem;
+  background-color: #1b1938;
+  padding: 7rem 10rem;
   color: white;
-  padding: 9rem;
 }
 
-.card-introduction p {
-  color: hsla(0, 0%, 100%, 0.75);
-  padding-top: 3rem;
+.card .text p {
+  font-size: 2rem;
+}
+
+.card .text header h1 {
+  font-size: 4rem;
+  padding-bottom: 5rem;
+}
+
+.card .text header h1 span.special {
+  color: #aa5cdb;
+}
+
+.card .text header p {
   padding-bottom: 8rem;
-  line-height: 150%;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 200%;
 }
 
-.card-introduction .stats ul {
+.card .text .stats ul {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
-.card-introduction .stats li {
-  flex: 1 1 40rem;
-  text-align: left;
+.card .text .stats ul li {
+  padding-top: 3rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 10rem;
+          flex: 1 1 10rem;
 }
 
-.card-introduction .stats li p {
-  padding-top: 0.5rem;
-  font-size: 1.5rem;
+.card .text .stats ul h5 {
+  font-size: 3rem;
 }
 
-.card-image {
-  flex: 1 1 40rem;
-  background-color: hsl(278, 93%, 28%);
+.card .text .stats ul p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.4rem;
 }
 
-img {
+.card .image {
+  border-bottom-right-radius: 3rem;
+  border-top-right-radius: 3rem;
+  background-color: rebeccapurple;
+}
+
+.card .image img {
   width: 100%;
   height: 100%;
-  opacity: 0.4;
+  opacity: 40%;
+  border-bottom-right-radius: 3rem;
+  border-top-right-radius: 3rem;
 }
 
-.attribution {
-  font-size: 11px;
-  text-align: center;
-}
-.attribution a {
-  color: hsl(228, 45%, 44%);
+@media screen and (max-width: 1600px) {
+  .card {
+    width: 50%;
+    padding: 10rem 0;
+  }
+  .image {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .text {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  html {
+    font-size: 50%;
+  }
+  .card .image,
+  .card .image img {
+    border-radius: 0;
+    border-top-left-radius: 3rem;
+    border-top-right-radius: 3rem;
+  }
+  .card .text {
+    border-radius: 0;
+    border-bottom-left-radius: 3rem;
+    border-bottom-right-radius: 3rem;
+  }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 850px) {
+  .card {
+    width: 90%;
+  }
+  .card .text {
+    padding: 5rem 5rem;
+  }
+  .stats ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  html {
+    font-size: 50%;
+  }
 }
+/*# sourceMappingURL=style.css.map */

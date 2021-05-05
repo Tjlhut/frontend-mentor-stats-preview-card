@@ -2,36 +2,30 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
-
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./images/favicon-32x32.png"
-    />
-
-    <title>Frontend Mentor | Stats preview card component</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="icon" href="./images/favicon-32x32.png" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./style.css" />
+    <title>Frontend Mentor | Stats preview card component</title>
   </head>
   <body>
-    <main>
-      <section class="card center">
-        <div class="card-introduction">
-          <h1>
-            Get <span class="special">insights</span> that help your business
-            grow.
-          </h1>
-          <p>
-            Discover the benefits of data analytics and make better decisions
-            regarding revenue, customer experience, and overall efficiency.
-          </p>
+    <div class="content">
+      <div class="card">
+        <section class="text">
+          <header>
+            <h1>
+              Get <span class="special">insights</span> that help your business
+              grow.
+            </h1>
+            <p>
+              Discover the benefits of data analytics and make better decisions
+              regarding revenue, customer experience, and overall efficiency.
+            </p>
+          </header>
           <div class="stats">
             <ul>
               <li>
@@ -48,20 +42,14 @@
               </li>
             </ul>
           </div>
-        </div>
-        <div class="card-image">
-          <img src="./images/image-header-desktop.jpg" alt="" />
-        </div>
-      </section>
-    </main>
-
-    <!-- <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Omar Almusallam</a>. -->
-
-      
+        </section>
+        <section class="image">
+          <img
+            src="./images/image-header-desktop.jpg"
+            alt="Professional looking ladies at work"
+          />
+        </section>
+      </div>
     </div>
   </body>
 </html>
